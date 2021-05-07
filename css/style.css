@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
+:root {
+  --primary-color: #047aed;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -40,8 +44,27 @@ img {
   justify-content: space-between;
 }
 
+.showcase {
+  height: 400px;
+  background-color: var(--primary-color);
+  color: #fff;
+  position: relative;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.grid {
+  display: grid;
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
 .navbar {
-  background-color: #047aed;
+  background-color: var(--primary-color);
   height: 70px;
   color: white;
 }
@@ -60,6 +83,11 @@ img {
   border-bottom: 2px solid #fff;
 }
 
+.showcase .grid {
+  grid-template-columns: 55% 45%;
+  gap: 30px;  
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -67,9 +95,27 @@ img {
   padding: 0 40px;
 }
 
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+  color: #333;
+}
+
 .flex {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  justify-content:center;
+  height: 100%;
+  align-items: center;
 }
